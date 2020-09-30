@@ -5,7 +5,7 @@ Flask==1.1.1
 chatterbot>=1.0.0
 chatterbot-corpus>=1.2.0
 SQLAlchemy>=1.2
-spacy>=0.101.0
+spacy==2.0.18
 gunicorn==19.9.0
 itsdangerous==1.1.0
 Jinja2==2.10.1
