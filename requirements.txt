@@ -5,9 +5,10 @@ Flask==1.1.1
 chatterbot>=1.0.0
 chatterbot-corpus>=1.2.0
 SQLAlchemy>=1.2
-spacy==2.0.18
 gunicorn==19.9.0
 itsdangerous==1.1.0
 Jinja2==2.10.1
 MarkupSafe==1.1.1
 Werkzeug==0.15.5
+spacy>=2.0.16,<2.1.0
+https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-2.2.0/en_core_web_sm-2.2.0.tar.gz
