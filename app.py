@@ -23,6 +23,5 @@ def get_bot_response():
     userText = request.args.get('msg')
     return str(english_bot.get_response(userText))
 
-
-if __name__ == "__main__":
-    app.run()
+if __name__ == '__main__':
+	app.run(debug=True)
