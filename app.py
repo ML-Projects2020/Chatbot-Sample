@@ -1,6 +1,11 @@
 from flask import Flask, render_template, request
 from chatterbot import ChatBot
 from chatterbot.trainers import ChatterBotCorpusTrainer
+import en_core_web_sm
+
+nlp = en_core_web_sm.load()
+doc = nlp(u"This is a sentence.")
+
 
 app = Flask(__name__)
 
@@ -10,6 +15,7 @@ trainer.train("./greetings.yml")
 
 @app.route("/")
 def home():
+    print('doc', doc)
     return render_template("index.html")
 
 @app.route("/get")
