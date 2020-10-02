@@ -3,7 +3,8 @@ from chatterbot import ChatBot
 from chatterbot.trainers import ChatterBotCorpusTrainer
 import pickle
 import spacy
-import spacy.load('en')
+
+spacy.load('en')
 
 app = Flask(__name__)
 
