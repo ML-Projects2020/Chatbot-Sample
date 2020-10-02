@@ -10,7 +10,7 @@ app = Flask(__name__)
 
 model = pickle.load(open("nltk.pkl", 'rb'))
 
-english_bot = ChatBot("Chatterbot")
+# english_bot = ChatBot("Chatterbot")
 # trainer = ChatterBotCorpusTrainer(english_bot)
 # trainer.train("./greetings.yml")
 
@@ -18,11 +18,11 @@ english_bot = ChatBot("Chatterbot")
 def home():
     return render_template("index.html")
 
-@app.route("/chatterbot")
-def get_bot_response():
-    print(request)
-    userText = request.args.get('msg')
-    return str(english_bot.get_response(userText))
+# @app.route("/chatterbot")
+# def get_bot_response():
+#     print(request)
+#     userText = request.args.get('msg')
+#     return str(english_bot.get_response(userText))
 
 @app.route("/chat-nltk")
 def get_response():
