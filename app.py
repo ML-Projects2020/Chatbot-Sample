@@ -2,9 +2,6 @@ from flask import Flask, render_template, request
 # from chatterbot import ChatBot
 # from chatterbot.trainers import ChatterBotCorpusTrainer
 import pickle
-import spacy
-
-spacy.load('en')
 
 app = Flask(__name__)
 
