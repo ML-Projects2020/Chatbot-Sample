@@ -24,7 +24,11 @@ def home():
 @app.route("/chat-nltk")
 def get_response():
     userText = request.args.get('msg')
-    return str(model.respond(userText))
+    response = model.respond(userText)
+    if response is None:
+        print("*******")
+        response = "Am Sorry, I am not trained for that"
+    return response
 
 if __name__ == '__main__':
 	app.run(debug=True)

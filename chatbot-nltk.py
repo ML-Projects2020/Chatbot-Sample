@@ -17,11 +17,15 @@ set_pairs = [
     ],
     [
         'how are you ?',
-        ['I am fine, thank you! How can i help you?', ]
+        ['I am fine, thank you! How are you doing?', ]
     ],
     [
-        'I am fine, thank you',
-        ['great to hear that, how can i help you?', ]
+        '(.*) you ?',
+        ['I am fine, thank you! How are you doing?', ]
+    ]
+    [
+        'I am fine (.*)',
+        ['great to hear that', ]
     ],
     [
         'how can i help you? ',
@@ -45,7 +49,7 @@ set_pairs = [
         ['Iam happy to help', 'No problem, you are welcome', ]
     ],
     [
-        'quit',
+        'Bye',
         ['Bye, take care. See you soon :) ',
             'It was nice talking to you. See you soon :)']
     ],
