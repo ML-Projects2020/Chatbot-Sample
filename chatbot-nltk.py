@@ -28,6 +28,10 @@ set_pairs = [
         ['great to hear that', ]
     ],
     [
+        'I am good (.*)',
+        ['great to hear that', ]
+    ],
+    [
         'how can i help you? ',
         ['i am looking for online guides and courses to learn data science, can you suggest?',
          'i am looking for data science training platforms', ]
