@@ -11,8 +11,8 @@ app = Flask(__name__)
 model = pickle.load(open("nltk.pkl", 'rb'))
 
 english_bot = ChatBot("Chatterbot")
-trainer = ChatterBotCorpusTrainer(english_bot)
-trainer.train("./greetings.yml")
+# trainer = ChatterBotCorpusTrainer(english_bot)
+# trainer.train("./greetings.yml")
 
 @app.route("/")
 def home():
