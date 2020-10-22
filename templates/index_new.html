@@ -227,14 +227,26 @@
     function botResponse(rawText) {
       // Bot Response
       $.get("/chat-nltk", { msg: rawText }).done(function (data) {
-        console.log(rawText);
-        console.log(data);
-        const msgText = data;
-        if(data == 'calendly') {
-           appendMessageCal(BOT_NAME, BOT_IMG, "left", msgText);
-        } else {
-           appendMessage(BOT_NAME, BOT_IMG, "left", msgText);
-        }
+        // var patt = new RegExp('^[a-z0-9]+[\._]?[a-z0-9]+[@]\w+[.]\w{2,3}$');
+        // var pattRes = patt.test(str);
+        // var count = sessionStorage.getItem("count");
+        // console.log("Count ", count);
+        // console.log("pattRes ", pattRes);
+        // if(count == 0 && pattRes) {
+        //   sessionStorage.setItem("count",1);
+        //   appendMessage(BOT_NAME, BOT_IMG, "left", "Thanks, how can I help you?");
+        // } else if(count == 0 && !pattRes) {
+        //   appendMessage(BOT_NAME, BOT_IMG, "left", "Please enter your mail ID");
+        // } else {
+          console.log(rawText);
+          console.log(data);
+          const msgText = data;
+          if(data == 'calendly') {
+            appendMessageCal(BOT_NAME, BOT_IMG, "left", msgText);
+          } else {
+            appendMessage(BOT_NAME, BOT_IMG, "left", msgText);
+          }
+        // }
 
       });
     }
