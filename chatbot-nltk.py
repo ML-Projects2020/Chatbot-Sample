@@ -17,19 +17,11 @@ set_pairs = [
     ],
     [
         'how are you ?',
-        ['I am fine, thank you! How are you doing?', ]
+        ['I am fine, thank you! How can i help you?', ]
     ],
     [
-        '(.*) you ?',
-        ['I am fine, thank you! How are you doing?', ]
-    ]
-    [
-        'I am fine (.*)',
-        ['great to hear that', ]
-    ],
-    [
-        'I am good (.*)',
-        ['great to hear that', ]
+        'I am fine, thank you',
+        ['great to hear that, how can i help you?', ]
     ],
     [
         'how can i help you? ',
@@ -53,9 +45,29 @@ set_pairs = [
         ['Iam happy to help', 'No problem, you are welcome', ]
     ],
     [
-        'Bye',
+        'quit',
         ['Bye, take care. See you soon :) ',
             'It was nice talking to you. See you soon :)']
+    ],
+    [
+        'Please schedule a meeting',
+         ['calendly',]
+    ],
+    [
+         'What is xAmplify?',
+         ['xAmplify is an industry-first, GDPR/CCPA-ready, through-channel marketing automation platform.',]
+    ],
+    [
+         'What is TCMA?',
+         ['Through-Channel Marketing Automation (TCMA) is technology.',]
+    ],
+    [
+         'Features of xAmplify?',
+         ['Co-branding event marketing, Automatic co-branding, Forms and landing pages.',]     
+    ],
+    [
+        'What xAmplify does?',
+        ['With xAmplify Sail, we’re your end-to-end channel marketing team.',]
     ],
 ]
 my_reflections =  {'i am': 'you are',
