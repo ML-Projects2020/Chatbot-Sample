@@ -25,20 +25,20 @@ app.config['DEBUG'] = True
 mail = Mail(app)
 model = pickle.load(open("nltk.pkl", 'rb'))
 
-english_bot = ChatBot("Chatterbot",
-                    logic_adapters=[
-                            'chatterbot.logic.MathematicalEvaluation',
-                            'chatterbot.logic.TimeLogicAdapter',
-                            'chatterbot.logic.BestMatch',
-                            {
-                                'import_path': 'chatterbot.logic.BestMatch',
-                                'default_response': 'I am sorry, but I do not understand. I am still learning.',
-                                'maximum_similarity_threshold': 0.90
-                            }
-                        ]
-                    )
-trainer = ChatterBotCorpusTrainer(english_bot)
-trainer.train("./greetings.yml")    
+# english_bot = ChatBot("Chatterbot",
+#                     logic_adapters=[
+#                             'chatterbot.logic.MathematicalEvaluation',
+#                             'chatterbot.logic.TimeLogicAdapter',
+#                             'chatterbot.logic.BestMatch',
+#                             {
+#                                 'import_path': 'chatterbot.logic.BestMatch',
+#                                 'default_response': 'I am sorry, but I do not understand. I am still learning.',
+#                                 'maximum_similarity_threshold': 0.90
+#                             }
+#                         ]
+#                     )
+# trainer = ChatterBotCorpusTrainer(english_bot)
+# trainer.train("./greetings.yml")    
 
 regex = '^[a-z0-9]+[\._]?[a-z0-9]+[@]\w+[.]\w{2,3}$' 
 mail_id = None  
@@ -73,16 +73,16 @@ def get_bot_response():
     print(request)
     userText = request.args.get('msg')
 
-    global count
-    global mail_id
-    print(count, re.search(regex,userText))
-    if(count == 0 and re.search(regex,userText)):
-        print("mail id")
-        mail_id = userText 
-        increment(count)
-        return 'Thanks, how can I help you?'
-    elif(count == 0 and re.search(regex,userText) == None):
-        return 'Please enter valid email id'
+    # global count
+    # global mail_id
+    # print(count, re.search(regex,userText))
+    # if(count == 0 and re.search(regex,userText)):
+    #     print("mail id")
+    #     mail_id = userText 
+    #     increment(count)
+    #     return 'Thanks, how can I help you?'
+    # elif(count == 0 and re.search(regex,userText) == None):
+    #     return 'Please enter valid email id'
 
     # conn = psycopg2.connect(database="chatbotdb", user = "postgres", password = "postgres", host = 'localhost', port = "5432")
     # res = str(english_bot.get_response(userText))
@@ -93,7 +93,7 @@ def get_bot_response():
     # conn.commit() 
     # cursor.close()
     # conn.close()
-    return res
+    return "res"
 
 @app.route("/createjira")
 def create_jira():
